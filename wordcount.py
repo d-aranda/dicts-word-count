@@ -1,0 +1,2 @@
+"""Count words in file."""
+
