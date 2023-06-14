@@ -1,14 +1,17 @@
 """Count words in file."""
 
-with open("test.txt") as file:
+# with open("test.txt") as file:
 
-    repetitions = {}
+import sys
+file = open(sys.argv[1])
 
-    for line in file:
-        line = line.rstrip().split(" ")
+repetitions = {}
 
-        for word in line:
-            repetitions[word] = repetitions.get(word, 0) + 1
+for line in file:
+    line = line.rstrip().split(" ")
 
-    for keys, values in repetitions.items():
-        print(keys, values)
+    for word in line:
+        repetitions[word] = repetitions.get(word, 0) + 1
+
+for keys, values in repetitions.items():
+    print(keys, values)
